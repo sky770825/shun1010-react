@@ -30,3 +30,6 @@ dist-ssr
 
 # Supabase temp files
 supabase/.temp/
+
+# Bun lockfile（避免觸發 Cloudflare 使用 bun）
+bun.lockb
