@@ -10,18 +10,6 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // 確保無論從哪個路徑訪問都能正確載入
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    console.log('App loaded at path:', currentPath);
-    
-    // 如果訪問的是 /index1 但沒有匹配到路由，手動導航
-    if (currentPath === '/index1' || currentPath === '/index1.html') {
-      // 路由應該已經匹配，這裡只是記錄
-      console.log('React app should load for:', currentPath);
-    }
-  }, []);
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
